@@ -9,6 +9,7 @@ namespace Hashing
     /// <summary>
     /// UC1 - To find the frequency of words in sentence
     /// UC2 - To find the frequency of words in paragraph
+    /// UC3 - Removal of the word
     /// </summary>
 
     //Key value 
@@ -88,6 +89,28 @@ namespace Hashing
             }
 
         }
+
+        public void Removal(K key)
+        {
+            int position = ArrayPosition(key);
+            LinkedList<KeyValue<K, V>> linkedList = LinkedListPosition(position);
+            bool itemFound = false;
+            KeyValue<K, V> founditem = default(KeyValue<K, V>);
+            foreach (KeyValue<K, V> keyValue in linkedList)
+            {
+                if (keyValue.Key.Equals(key))
+                {
+                    itemFound = true;
+                    founditem = keyValue;
+                }
+            }
+            if (itemFound)
+            {
+                linkedList.Remove(founditem);
+
+            }
+        }
+
         //Display Linkedlist elements for particular key
         public void Display(K key)
         {
