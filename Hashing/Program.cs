@@ -42,7 +42,7 @@ namespace Hashing
 
                     MyMapNode<string, int> map = new MyMapNode<string, int>(10);
                     string[] Paragraph;
-                    string input = "earning to code is learning to create and innovate code , to create easy and learnable code";
+                    string input = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
                     Paragraph = input.Split(' ');
                     //Given string input
 
