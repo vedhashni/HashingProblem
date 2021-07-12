@@ -8,10 +8,11 @@ namespace Hashing
 {
     /// <summary>
     /// UC1 - To find the frequency of words in sentence
+    /// UC2 - To find the frequency of words in paragraph
     /// </summary>
-    
-        //Key value 
-        public struct KeyValue<K, V>
+
+    //Key value 
+    public struct KeyValue<K, V>
         {
             public K Key { get; set; }
             public V Value { get; set; }

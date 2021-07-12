@@ -37,8 +37,39 @@ namespace Hashing
                         mymapnode.Display(i);
                     }
                     break;
+
+                case 2:
+
+                    MyMapNode<string, int> map = new MyMapNode<string, int>(10);
+                    string[] Paragraph;
+                    string input = "earning to code is learning to create and innovate code , to create easy and learnable code";
+                    Paragraph = input.Split(' ');
+                    //Given string input
+
+                    int counts = 1;
+                    foreach (string i in Paragraph)
+                    {
+                        counts = map.CheckHash(i);
+                        if (counts > 1)
+                        {
+                            map.Add(i, counts);
+                        }
+                        else
+                        {
+                            map.Add(i, 1);
+                        }
+                    }
+                    Console.WriteLine("\n---------Frequency of words in paragraph---------\n");
+                    IEnumerable<string> distinct = Paragraph.Distinct<string>();
+                    foreach (var i in distinct)
+                    {
+                        map.Display(i);
+                    }
+
+                    break;
+
                 default:
-                    Console.WriteLine("Enter the valid option!!!");
+                   
                     break;
             }
         }
